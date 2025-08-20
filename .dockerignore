@@ -1,0 +1,23 @@
+# Local dependencies
+node_modules
+
+# Local Builds
+dist
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Git
+.git
+.gitignore
+
+# IDEs
+.vscode
+*.swp
+*.swo
+
+# Operating system
+.DS_Store
+Thumbs.db
