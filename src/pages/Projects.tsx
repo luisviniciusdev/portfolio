@@ -1,3 +1,10 @@
+import { Navbar } from "@/components/Navbar";
+
 export default function Projects() {
-  return <h1>Projetos</h1>;
+  return (
+    <>
+      <h1>Projects</h1>
+      <Navbar />
+    </>
+  );
 }
