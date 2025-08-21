@@ -1,0 +1,16 @@
+export const technologys: string[] = [
+  "typescript",
+  "javascript",
+  "nestjs",
+  "fastify",
+  "express",
+  "postgresql",
+  "mysql",
+  "mongodb",
+  "grpc",
+  "redis",
+  "kafka",
+  "rabbitmq",
+  "typeorm",
+  "mongoose",
+];
