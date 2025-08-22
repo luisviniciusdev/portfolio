@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import profile from "../images/luis.jpg";
 import { Button } from "./ui/button";
 import { FileDown, Github, Linkedin } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export const HeroSection = () => {
   return (
@@ -20,8 +21,8 @@ export const HeroSection = () => {
       <div className="space-y-4 text-base font-normal text-zinc-400 prose prose-dark mt-4 mb-5 [&_span]:font-bold [&_span]:hover:text-primary/75">
         <p>
           Gosto de encarar sistemas como quebra-cabeças: cada serviço, cada API,
-          cada arquitetura funciona como peças que, quando bem encaixadas,
-          formam algo valoso.
+          cada arquitetura funciona como peças que, quando bem encaixadas,{" "}
+          <span>formam algo valioso</span>.
         </p>
 
         <p>
@@ -40,25 +41,49 @@ export const HeroSection = () => {
         </p>
 
         <p>
-          Meu objetivo é continuar conectando essas peças — <span>código</span>,{" "}
-          <span>arquitetura</span> e <span>infraestrutura</span> — para
-          transformar ideias em sistemas sólidos, escaláveis e elegantes. 🚀
+          Meu objetivo é continuar conectando essas peças: <span>código</span>,{" "}
+          <span>arquitetura</span> e <span>infraestrutura</span> para
+          transformar ideias em sistemas sólidos, escaláveis e elegantes.
         </p>
       </div>
 
-      <div className="flex gap-4">
-        <Button variant="outline" size="sm">
-          <FileDown /> Baixar Currículo
-        </Button>
+      <div className="flex gap-3">
+        <a href="/caminho-do-seu-arquivo.pdf" download>
+          <Button
+            variant="outline"
+            size="sm"
+            className="text-gray-500 bg-gray-800 hover:cursor-pointer hover:text-primary border-primary"
+          >
+            <FileDown /> Baixar Currículo
+          </Button>
+        </a>
 
-        <Button variant="ghost" size="icon" className="size-8">
-          <Linkedin />
-        </Button>
+        <a
+          href="https://www.linkedin.com/in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            variant="outline"
+            size="icon"
+            className="size-8 text-gray-500 bg-gray-800 hover:cursor-pointer hover:text-primary"
+          >
+            <Linkedin />
+          </Button>
+        </a>
 
-        <Button variant="ghost" size="icon" className="size-8">
-          <Github />
-        </Button>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <Button
+            variant="outline"
+            size="icon"
+            className="size-8 text-gray-500 bg-gray-800 hover:cursor-pointer hover:text-primary"
+          >
+            <Github />
+          </Button>
+        </a>
       </div>
+
+      <Separator className="mt-5 mb-8 bg-zinc-100" />
     </section>
   );
 };

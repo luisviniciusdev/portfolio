@@ -1,22 +1,23 @@
 import { Badge } from "./ui/badge";
 
 interface TechBadgeProps {
-  techName: string;
+  name: string;
 }
 
-export const TechBadge = ({ techName }: TechBadgeProps) => {
-  const formattedName = techName.charAt(0).toUpperCase() + techName.slice(1);
+export const TechBadge = ({ name }: TechBadgeProps) => {
+  const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
 
   return (
-    <div className="flex items-center gap-2">
-      <Badge variant="outline" className="flex items-center gap-1">
-        <img
-          src={`/tech-icons/${techName}.svg`}
-          className="h-5 w-5"
-          alt={formattedName}
-        />
-        {formattedName}
-      </Badge>
-    </div>
+    <Badge
+      variant="outline"
+      className="flex items-center gap-2 rounded-full px-3 py-2 text-base font-normal text-zinc-400 shadow-xs hover:bg-input hover:border-white hover:font-semibold"
+    >
+      <img
+        src={`/tech-icons/${name}.svg`}
+        className="h-5 w-5 "
+        alt={formattedName}
+      />
+      {formattedName}
+    </Badge>
   );
 };

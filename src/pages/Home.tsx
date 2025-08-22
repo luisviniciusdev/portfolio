@@ -11,8 +11,8 @@ export default function Home() {
     <>
       <Navbar />
       <Header />
-      <main className="mt-5">
-        <Card className="p-5 rounded-none sm:rounded-lg">
+      <main className="mt-5 max-w-182 mx-auto">
+        <Card className="p-5 rounded-none sm:rounded-lg gap-0">
           <HeroSection />
           <TechStack />
           <Blockquote />
